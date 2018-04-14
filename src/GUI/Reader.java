@@ -1,4 +1,4 @@
-package JavaFiles;
+package GUI;
 
 
 import java.io.*;

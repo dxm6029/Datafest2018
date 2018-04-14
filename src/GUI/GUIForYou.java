@@ -1,25 +1,12 @@
 package GUI;
 
-import JavaFiles.FileReader;
 import javafx.application.Application;
-import javafx.geometry.Insets;
-import javafx.geometry.Pos;
 import javafx.scene.Scene;
-import javafx.scene.control.Button;
-import javafx.scene.control.ContentDisplay;
-import javafx.scene.control.Label;
-import javafx.scene.control.TextField;
-import javafx.scene.image.Image;
-import javafx.scene.image.ImageView;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.GridPane;
-import javafx.scene.layout.HBox;
-import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
 
 import javax.swing.plaf.nimbus.State;
-import java.awt.*;
-import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -32,7 +19,7 @@ public class GUIForYou extends Application{
     private GridPane grid;
     private StateLabel [][] labels = new StateLabel[rowSize][colSize];
 
-    private GridPane makeGridPane(int cols, int rows, Map<String, State> jobs){
+    private GridPane makeGridPane(int cols, int rows, Map<String, GUI.State> jobs){
         grid = new GridPane();
 
         for(int x = 0; x < cols; x ++){
@@ -44,7 +31,7 @@ public class GUIForYou extends Application{
                     case 0:
                         if(y == 0){
                             label.setText("AK");
-                            State state = jobs.get("AK");
+                            GUI.State state = jobs.get("AK");
                             label.colorChange(state.getNumJobs());
                         }
                         else if(y == 8){ label.setText("HI"); }

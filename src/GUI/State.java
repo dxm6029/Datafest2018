@@ -1,4 +1,4 @@
-package JavaFiles;
+package GUI;
 
 /**
  * Created by samueladams on 4/14/18.
