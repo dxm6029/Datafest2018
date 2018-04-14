@@ -20,6 +20,7 @@ import javafx.stage.Stage;
 import javax.swing.plaf.nimbus.State;
 import java.awt.*;
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.Map;
 
 public class GUIForYou extends Application{
@@ -31,7 +32,7 @@ public class GUIForYou extends Application{
     private GridPane grid;
     private StateLabel [][] labels = new StateLabel[rowSize][colSize];
 
-    private GridPane makeGridPane(int cols, int rows){
+    private GridPane makeGridPane(int cols, int rows, Map<String, State> jobs){
         grid = new GridPane();
 
         for(int x = 0; x < cols; x ++){
@@ -41,7 +42,11 @@ public class GUIForYou extends Application{
                 label.setMinSize(colSize,rowSize);
                 switch(x){
                     case 0:
-                        if(y == 0){ label.setText("AK"); }
+                        if(y == 0){
+                            label.setText("AK");
+                            State state = jobs.get("AK");
+                            label.colorChange(state.getNumJobs());
+                        }
                         else if(y == 8){ label.setText("HI"); }
                         break;
                     case 1:
@@ -250,7 +255,7 @@ public class GUIForYou extends Application{
         final int ROWS = 9;
         mainStage.setTitle("Data");
         BorderPane totalPane = new BorderPane();
-        GridPane statePane = makeGridPane(COLUMNS, ROWS);
+        GridPane statePane = makeGridPane(COLUMNS, ROWS, new HashMap<>()); //todo need to pass in hashmap
         totalPane.setCenter(statePane);
         mainStage.setScene(new Scene(totalPane));
         mainStage.show();

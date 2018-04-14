@@ -10,14 +10,6 @@ public class Job {
         this.jobs = jobs;
     }
 
-    public int getTotalJobs(){
-        int totalJobs = 0;
-        for(int numJob: jobs.values()){
-            totalJobs+=numJob;
-        }
-        return totalJobs;
-    }
-
     public void addJob(String name, int number){
         jobs.put(name, number);
     }
