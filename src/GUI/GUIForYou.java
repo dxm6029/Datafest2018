@@ -19,7 +19,7 @@ public class GUIForYou extends Application{
     private GridPane grid;
     private StateLabel [][] labels = new StateLabel[rowSize][colSize];
 
-    private GridPane makeGridPane(int cols, int rows, Map<String, State> jobs){
+    private GridPane makeGridPane(int cols, int rows, Map<String, GUI.State> jobs){
         grid = new GridPane();
 
         for(int x = 0; x < cols; x ++){
@@ -31,7 +31,7 @@ public class GUIForYou extends Application{
                     case 0:
                         if(y == 0){
                             label.setText("AK");
-                            State state = jobs.get("AK");
+                            GUI.State state = jobs.get("AK");
                             label.colorChange(state.getNumJobs());
                         }
                         else if(y == 8){ label.setText("HI"); }
