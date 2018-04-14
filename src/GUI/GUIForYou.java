@@ -11,13 +11,14 @@ import java.util.Map;
 
 public class GUIForYou extends Application{
 
-    private int colSize = 75;
-    private int rowSize = 75;
+    private int size = 90;
     private Stage mainStage;
     private Map<String, String> params = null;
     private GridPane grid;
-    private StateLabel [][] labels = new StateLabel[rowSize][colSize];
-    private GridPane statePane;
+    final int COLUMNS = 12;
+    final int ROWS = 9;
+    private StateLabel [][] labels = new StateLabel[COLUMNS][ROWS];
+    private GridPane statesPane;
 
     private GridPane makeGridPane(int cols, int rows, Map<String, GUI.State> jobs){
         grid = new GridPane();
@@ -25,11 +26,13 @@ public class GUIForYou extends Application{
         for(int x = 0; x < cols; x ++){
             for(int y = 0; y < rows; y++){
                 StateLabel label = new StateLabel();
-                label.setMaxSize(colSize,rowSize);
-                label.setMinSize(colSize,rowSize);
+                label.setMaxSize(size,size);
+                label.setMinSize(size,size);
+                System.out.println("" + x +" " + y);
                 switch(x){
                     case 0:
                         if(y == 0){
+                            System.out.println("Alaska");
                             label.setText("AK");
                             GUI.State state = jobs.get("AK");
                             label.colorChange(state.getNumJobs());
@@ -41,6 +44,7 @@ public class GUIForYou extends Application{
                     case 1:
                         switch(y){
                             case 2:
+                                System.out.println("Washington");
                                 label.setText("WA");
                                 label.colorChange(jobs.get("WA").getNumJobs());
                                 break;
@@ -105,12 +109,12 @@ public class GUIForYou extends Application{
                                 label.colorChange(jobs.get("SD").getNumJobs());
                                 break;
                             case 4:
-                                label.setText("NA");
-                                label.colorChange(jobs.get("NA").getNumJobs());
+                                label.setText("NB");
+                                label.colorChange(jobs.get("NB").getNumJobs());
                                 break;
                             case 5:
-                                label.setText("KA");
-                                label.colorChange(jobs.get("KA").getNumJobs());
+                                label.setText("KS");
+                                label.colorChange(jobs.get("KS").getNumJobs());
                                 break;
                             case 6:
                                 label.setText("OK");
@@ -234,7 +238,7 @@ public class GUIForYou extends Application{
                                 break;
                             case 5:
                                 label.setText("D.C.");
-                                label.colorChange(jobs.get("D.C.").getNumJobs());
+                                label.colorChange(jobs.get("DC").getNumJobs());
                                 break;
                             case 7:
                                 label.setText("FL");
@@ -257,8 +261,8 @@ public class GUIForYou extends Application{
                                 label.colorChange(jobs.get("CT").getNumJobs());
                                 break;
                             case 4:
-                                label.setText("DA");
-                                label.colorChange(jobs.get("DA").getNumJobs());
+                                label.setText("DE");
+                                label.colorChange(jobs.get("DE").getNumJobs());
                                 break;
                         }
                         break;
@@ -291,7 +295,7 @@ public class GUIForYou extends Application{
         this.mainStage = mainStage;
         mainStage.setTitle("Data");
         BorderPane totalPane = new BorderPane();
-        totalPane.setCenter(statePane);
+        totalPane.setCenter(statesPane);
         mainStage.setScene(new Scene(totalPane));
         mainStage.show();
         mainStage.setAlwaysOnTop(true);
@@ -311,11 +315,9 @@ public class GUIForYou extends Application{
             String st = s.substring(1,3);
             System.out.println(st);
             GUI.State state = new GUI.State(st,map.get(s).intValue());
-            mapy.put(s,state);
+            mapy.put(st,state);
         }
-        final int COLUMNS = 12;
-        final int ROWS = 9;
-        GridPane statePane = makeGridPane(COLUMNS, ROWS, mapy);
+        GridPane statesPane = makeGridPane(COLUMNS, ROWS, mapy);
 
     }
 
