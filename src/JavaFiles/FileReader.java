@@ -30,10 +30,16 @@ public class FileReader extends Application{
     private static Map<String, Integer> njobMap;
     private static Map<String, Map<String, Integer>> jobMap;
     private static Map<String, Integer> sJobMap;
+    private Stage mainStage;
+
+    private int colSize = 75;
+    private int rowSize = 75;
 
     private Map<String, String> params = null;
 
     public static void readFile(String file){
+        System.out.println("File: " + file);
+
         map = new HashMap<>();
         njobMap = new HashMap<>();
         sJobMap = new HashMap<>();
@@ -65,6 +71,7 @@ public class FileReader extends Application{
                 }
 
             }
+            /*
             //for (String s : map.keySet()){
             //    System.out.println("State: " + s + "    count: " + map.get(s));
             //}
@@ -73,31 +80,89 @@ public class FileReader extends Application{
                 System.out.print(String.format("%-30s%s%n", "Job: " + job, " count: " + jobMap.get(job)));
                 //System.out.println("Job: " + job + " count: " + jobMap.get(job) );
             }
-
+            */
         }
         catch (IOException e){System.exit(4);}
 
     }
 
-    public void start(Stage mainStage) {
+    private GridPane makeGridPane(int cols, int rows){
+        GridPane grid = new GridPane();
+        for(int x = 0; x < cols; x ++){
+            for(int y = 0; y < rows; y++){
+                Label label = new Label();
+                label.setMaxSize(colSize,rowSize);
+                label.setMinSize(colSize,rowSize);
+                switch(x){
+                    case 0:
+                        if(y == 0){ label.setText("AK"); }
+                        else if(y == 7){ label.setText("HI"); }
+                        break;
+                    case 1:
+                        switch(y){
+                            case 2:
+                                label.setText("WA");
+                                break;
+                            case 3:
+                                label.setText("OR");
+                                break;
+                            case 4:
+                                label.setText("CA");
+                                break;
+                        }
+                        break;
+                    case 2:
+                        switch (y){
+                            case 2:
+                                label.setText("ID");
+                                break;
+                            case 3:
+                                label.setText("NV");
+                                break;
+                            case 4:
+                                label.setText("UT");
+                                break;
+                            case 5:
+                                label.setText("AZ");
+                                break;
+                        }
+                }
+                grid.add(label, x, y);
+            }
+        }
+        return grid;
+    }
 
+    public void start(Stage mainStage) {
+        System.out.println("HI");
+        this.mainStage = mainStage;
+        final int COLUMNS = 12;
+        final int ROWS = 8;
+        mainStage.setTitle("Data");
+        BorderPane totalPane = new BorderPane();
+        GridPane statePane = makeGridPane(COLUMNS, ROWS);
+        totalPane.setCenter(statePane);
+        mainStage.setScene(new Scene(totalPane));
+        mainStage.show();
+        mainStage.setAlwaysOnTop(true);
+        mainStage.setResizable(false);
     }
 
     /*
     initializes board and connects to server
      */
     @Override
-    public void init() {
-        readFile(getParamNamed("host"));
+    public void init() throws java.lang.Exception{
+        readFile(getParamNamed("file"));
     }
 
-    private String getParamNamed(String name){
+    private String getParamNamed(String name)throws java.lang.Exception{
         if (params == null) {
             params = super.getParameters().getNamed();
 
         }
         if (!params.containsKey(name)) {
-            throw new ReversiException(
+            throw new Exception(
                     "Parameter '--" + name + "=xxx' missing."
             );
         } else {
