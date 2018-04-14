@@ -30,6 +30,7 @@ public class FileReader extends Application{
     private static Map<String, Integer> njobMap;
     private static Map<String, Map<String, Integer>> jobMap;
     private static Map<String, Integer> sJobMap;
+
     private Map<String, String> params = null;
 
     public static void readFile(String file){
