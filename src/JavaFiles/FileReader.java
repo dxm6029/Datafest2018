@@ -126,6 +126,54 @@ public class FileReader extends Application{
                                 label.setText("AZ");
                                 break;
                         }
+                        break;
+                    case 3:
+                        switch (y){
+                            case 2:
+                                label.setText("MT");
+                                break;
+                            case 3:
+                                label.setText("WY");
+                                break;
+                            case 4:
+                                label.setText("CO");
+                                break;
+                            case 5:
+                                label.setText("NM");
+                                break;
+                        }
+                        break;
+                    case 4:
+                        switch (y){
+                            case 2:
+                                label.setText("ND");
+                                break;
+                            case 3:
+                                label.setText("SD");
+                                break;
+                            case 4:
+                                label.setText("NA");
+                                break;
+                            case 5:
+                                label.setText("KA");
+                                break;
+                            case 6:
+                                label.setText("OK");
+                                break;
+                            case 7:
+                                label.setText("TX");
+                                break;
+                        }
+                        break;
+                    case 5:
+                        switch (y){
+                            case 2:
+                                label.setText("MI");
+                                break;
+                            case 3:
+                                label.setText("IA");
+                                break;
+                        }
                 }
                 grid.add(label, x, y);
             }
