@@ -7,25 +7,9 @@ import java.util.SortedSet;
 import java.util.TreeSet;
 
 //import com.sun.org.apache.bcel.internal.generic.LADD;
-import javafx.application.Application;
-
-import java.io.PrintWriter;
-import java.util.*;
-
-import javafx.application.Platform;
-import javafx.scene.Node;
-import javafx.scene.Scene;
-import javafx.scene.control.Button;
-import javafx.scene.control.Label;
-import javafx.scene.image.Image;
-import javafx.scene.image.ImageView;
-import javafx.scene.layout.BorderPane;
-import javafx.scene.layout.GridPane;
-import javafx.stage.Stage;
 
 
-
-public class FileReader{
+public class FileReader {
 
     private static BufferedReader bf;
     private static Map<String, Integer> map;
@@ -33,7 +17,7 @@ public class FileReader{
     private static Map<String, Integer> sJobMap;
 
 
-    public static void readFile(String file){
+    public static Map<String, Integer> readFile(String file){
         System.out.println("File: " + file);
 
         map = new HashMap<>();
@@ -79,7 +63,7 @@ public class FileReader{
 
         }
         catch (IOException e){System.exit(4);}
-
+        return map;
     }
 
 

@@ -14,6 +14,12 @@ public class State {
         this.jobs = jobs;
     }
 
+    public State (String state, int numJobs){
+        this.state = state;
+        this.numJobs = numJobs;
+        this.jobs = null;
+    }
+
     public String getState() {
         return state;
     }

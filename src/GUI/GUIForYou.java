@@ -18,6 +18,7 @@ public class GUIForYou extends Application{
     private Map<String, String> params = null;
     private GridPane grid;
     private StateLabel [][] labels = new StateLabel[rowSize][colSize];
+    private GridPane statePane;
 
     private GridPane makeGridPane(int cols, int rows, Map<String, GUI.State> jobs){
         grid = new GridPane();
@@ -238,11 +239,8 @@ public class GUIForYou extends Application{
     public void start(Stage mainStage) {
         System.out.println("HI");
         this.mainStage = mainStage;
-        final int COLUMNS = 12;
-        final int ROWS = 9;
         mainStage.setTitle("Data");
         BorderPane totalPane = new BorderPane();
-        GridPane statePane = makeGridPane(COLUMNS, ROWS, new HashMap<>()); //todo need to pass in hashmap
         totalPane.setCenter(statePane);
         mainStage.setScene(new Scene(totalPane));
         mainStage.show();
@@ -256,7 +254,16 @@ public class GUIForYou extends Application{
     @Override
     public void init() throws java.lang.Exception{
         FileReader fr = new FileReader();
-        fr.readFile(getParamNamed("file"));
+        Map<String, Integer> map = fr.readFile(getParamNamed("file"));
+        Map<String, GUI.State> mapy = new HashMap<>();
+        for(String s: map.keySet()){
+            GUI.State state = new GUI.State(s,map.get(s).intValue());
+            mapy.put(s,state);
+        }
+        final int COLUMNS = 12;
+        final int ROWS = 9;
+        GridPane statePane = makeGridPane(COLUMNS, ROWS, mapy);
+
     }
 
     private String getParamNamed(String name)throws java.lang.Exception{
