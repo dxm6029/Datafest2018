@@ -6,17 +6,14 @@ import javafx.scene.paint.Color;
 public class StateLabel extends Label {
 
     private Color c;
-    private int row;
-    private int col;
 
     public StateLabel(){
-        c = Color.color(0, 225, 0);
+        c = Color.color(0, 1, 0);
     }
 
     public void colorChange(int count){
-        double incNum = count/2;
+        double incNum = count/400;
         c = Color.color(c.getRed() + incNum, c.getGreen() - incNum, 0);
-
 
     }
 
