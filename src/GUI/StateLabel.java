@@ -8,11 +8,11 @@ public class StateLabel extends Label {
     private Color c;
 
     public StateLabel(){
-        c = Color.color(0, 225, 0);
+        c = Color.color(0, 1, 0);
     }
 
     public void colorChange(int count){
-        double incNum = count/4;
+        double incNum = count/400;
         c = Color.color(c.getRed() + incNum, c.getGreen() - incNum, 0);
 
     }
