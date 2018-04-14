@@ -5,6 +5,8 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.SortedSet;
 import java.util.TreeSet;
+
+import com.sun.org.apache.bcel.internal.generic.LADD;
 import javafx.application.Application;
 
 import java.io.PrintWriter;
@@ -100,7 +102,7 @@ public class FileReader extends Application{
                 switch(x){
                     case 0:
                         if(y == 0){ label.setText("AK"); }
-                        else if(y == 7){ label.setText("HI"); }
+                        else if(y == 8){ label.setText("HI"); }
                         break;
                     case 1:
                         switch(y){
@@ -177,7 +179,122 @@ public class FileReader extends Application{
                             case 3:
                                 label.setText("IA");
                                 break;
+                            case 4:
+                                label.setText("MO");
+                                break;
+                            case 5:
+                                label.setText("AR");
+                                break;
+                            case 6:
+                                label.setText("LA");
+                                break;
                         }
+                        break;
+                    case 6:
+                        switch (y){
+                            case 2:
+                                label.setText("IL");
+                                break;
+                            case 3:
+                                label.setText("IN");
+                                break;
+                            case 4:
+                                label.setText("KY");
+                                break;
+                            case 5:
+                                label.setText("TN");
+                                break;
+                            case 6:
+                                label.setText("MS");
+                                break;
+                        }
+                        break;
+                    case 7:
+                        switch (y){
+                            case 2:
+                                label.setText("WI");
+                                break;
+                            case 3:
+                                label.setText("OH");
+                                break;
+                            case 4:
+                                label.setText("WV");
+                                break;
+                            case 5:
+                                label.setText("NC");
+                                break;
+                            case 6:
+                                label.setText("AL");
+                                break;
+                        }
+                        break;
+                    case 8:
+                        switch (y){
+                            case 2:
+                                label.setText("MI");
+                                break;
+                            case 3:
+                                label.setText("PA");
+                                break;
+                            case 4:
+                                label.setText("VA");
+                                break;
+                            case 5:
+                                label.setText("SC");
+                                break;
+                            case 6:
+                                label.setText("GA");
+                                break;
+                        }
+                        break;
+                    case 9:
+                        switch (y){
+                            case 2:
+                                label.setText("NY");
+                                break;
+                            case 3:
+                                label.setText("NJ");
+                                break;
+                            case 4:
+                                label.setText("MD");
+                                break;
+                            case 5:
+                                label.setText("D.C.");
+                                break;
+                            case 7:
+                                label.setText("FL");
+                                break;
+                        }
+                        break;
+                    case 10:
+                        switch (y){
+                            case 1:
+                                label.setText("VT");
+                                break;
+                            case 2:
+                                label.setText("RI");
+                                break;
+                            case 3:
+                                label.setText("CT");
+                                break;
+                            case 4:
+                                label.setText("DA");
+                                break;
+                        }
+                        break;
+                    case 11:
+                        switch (y){
+                            case 0:
+                                label.setText("ME");
+                                break;
+                            case 1:
+                                label.setText("NH");
+                                break;
+                            case 2:
+                                label.setText("MA");
+                                break;
+                        }
+                        break;
                 }
                 grid.add(label, x, y);
             }
@@ -189,7 +306,7 @@ public class FileReader extends Application{
         System.out.println("HI");
         this.mainStage = mainStage;
         final int COLUMNS = 12;
-        final int ROWS = 8;
+        final int ROWS = 9;
         mainStage.setTitle("Data");
         BorderPane totalPane = new BorderPane();
         GridPane statePane = makeGridPane(COLUMNS, ROWS);
