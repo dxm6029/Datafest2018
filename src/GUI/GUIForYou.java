@@ -7,6 +7,7 @@ import javafx.scene.layout.GridPane;
 import javafx.stage.Stage;
 
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 public class GUIForYou extends Application{
@@ -18,7 +19,7 @@ public class GUIForYou extends Application{
     final int COLUMNS = 12;
     final int ROWS = 9;
     private StateLabel [][] labels = new StateLabel[COLUMNS][ROWS];
-    private GridPane statesPane;
+    private Map<String, Integer> map;
 
     private GridPane makeGridPane(int cols, int rows, Map<String, GUI.State> jobs){
         grid = new GridPane();
@@ -284,7 +285,7 @@ public class GUIForYou extends Application{
                         break;
                 }
                 grid.add(label, x, y);
-                labels[x][y] = new StateLabel();
+                labels[x][y] = label;
             }
         }
         return grid;
@@ -295,6 +296,17 @@ public class GUIForYou extends Application{
         this.mainStage = mainStage;
         mainStage.setTitle("Data");
         BorderPane totalPane = new BorderPane();
+        Map<String, GUI.State> mapy = new HashMap<>();
+        for (int i = 0; i<map.size(); ++i){
+            List str = (List)map.keySet();
+            String s = (String)str.get(i);
+            System.out.println(s);
+            String st = s.substring(1,3);
+            System.out.println(st);
+            GUI.State state = new GUI.State(st,map.get(s).intValue());
+            mapy.put(st,state);
+        }
+        GridPane statesPane = makeGridPane(COLUMNS, ROWS, mapy);
         totalPane.setCenter(statesPane);
         mainStage.setScene(new Scene(totalPane));
         mainStage.show();
@@ -309,15 +321,6 @@ public class GUIForYou extends Application{
     public void init() throws java.lang.Exception{
         FileReader fr = new FileReader();
         Map<String, Integer> map = fr.readFile(getParamNamed("file"));
-        Map<String, GUI.State> mapy = new HashMap<>();
-        for(String s: map.keySet()){
-            System.out.println(s);
-            String st = s.substring(1,3);
-            System.out.println(st);
-            GUI.State state = new GUI.State(st,map.get(s).intValue());
-            mapy.put(st,state);
-        }
-        GridPane statesPane = makeGridPane(COLUMNS, ROWS, mapy);
 
     }
 
