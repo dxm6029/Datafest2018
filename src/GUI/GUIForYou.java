@@ -13,7 +13,7 @@ import java.util.Map;
 
 public class GUIForYou extends Application{
 
-    private int size = 90;
+    private int size = 75;
     private Map<String, String> params = null;
     private GridPane grid;
     final int COLUMNS = 12;
