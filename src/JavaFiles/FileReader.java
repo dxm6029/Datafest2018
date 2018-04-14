@@ -6,7 +6,7 @@ import java.util.Map;
 import java.util.SortedSet;
 import java.util.TreeSet;
 
-import com.sun.org.apache.bcel.internal.generic.LADD;
+//import com.sun.org.apache.bcel.internal.generic.LADD;
 import javafx.application.Application;
 
 import java.io.PrintWriter;
@@ -29,7 +29,6 @@ public class FileReader extends Application{
 
     private static BufferedReader bf;
     private static Map<String, Integer> map;
-    private static Map<String, Integer> njobMap;
     private static Map<String, Map<String, Integer>> jobMap;
     private static Map<String, Integer> sJobMap;
     private Stage mainStage;
@@ -74,19 +73,16 @@ public class FileReader extends Application{
                 }
 
             }
-            /*
-            //for (String s : map.keySet()){
-            //    System.out.println("State: " + s + "    count: " + map.get(s));
-            //}
+
             SortedSet<String> keys = new TreeSet<>(jobMap.keySet());
-            System.out.println("START");
             for(String job: keys){
-                for(String j: jobMap.get(job).keySet()){
-                    System.out.print(String.format("%-30s%s", "Category: " + job,
-                            String.format("%-30s%s%n", "Job: " + j, " count: " + jobMap.get(job).get(j))));
-                }
+                System.out.println(job);
+                //for(String j: jobMap.get(job).keySet()){
+                    //System.out.print(String.format("%-30s%s", "Category: " + job,
+                      //      String.format("%-30s%s%n", "Job: " + j, " count: " + jobMap.get(job).get(j))));
+                //}
             }
-            */
+
         }
         catch (IOException e){System.exit(4);}
 
