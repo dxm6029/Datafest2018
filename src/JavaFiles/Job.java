@@ -1,19 +1,31 @@
 package JavaFiles;
 
+import java.util.HashMap;
+
 public class Job {
-    private String name;
-    private int number;
+    private HashMap<String, Integer> jobs;
 
-    public Job(String name, int number){
-        this.name = name;
-        this.number = number;
+    public Job(HashMap jobs){
+        this.jobs = jobs;
     }
 
-    public int getNumber(){
-        return number;
+    public int getTotalJobs(){
+        int totalJobs = 0;
+        for(int numJob: jobs.values()){
+            totalJobs+=numJob;
+        }
+        return totalJobs;
     }
 
-    public String getName(){
-        return name;
+    public void addJob(String name, int number){
+        jobs.put(name, number);
+    }
+
+    public int getNumber(String name){
+        if(jobs.containsKey(name)){
+            return jobs.get(name);
+        }
+        System.out.println("Cannot find job");
+        return -1;
     }
 }
