@@ -19,23 +19,16 @@ public class FileReader {
             bf.readLine();
             String [] line = bf.readLine().split(",");
             String l;
-            while ((l = bf.readLine())!=null){
-                line = bf.readLine().split(",");
+            while ((l = bf.readLine()) !=null){
+                line = l.split(",");
                 if(map.containsKey(line[4])) {
                     map.put(line[4], map.get(line[4])+1);
                 }
                 else{
                     map.put(line[4], 1);
                 }
+
             }
-           // for (int i = 0; i < 1000; i++){
-           //     if(map.containsKey(line)) {
-           //         map.put(line[4], map.get(line)+1);
-           //     }
-           //     else{
-           //         map.put(line[4], 1);
-           //     }
-           // }
             for (String s : map.keySet()){
                 System.out.println("State: " + s + "    count: " + map.get(s));
             }
