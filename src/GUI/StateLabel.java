@@ -13,7 +13,9 @@ public class StateLabel extends Label {
 
     public void colorChange(int count){
         double incNum = count/400;
-        c = Color.color(c.getRed() + incNum, c.getGreen() - incNum, 0);
+        this.setText("HI");
+        this.setStyle("-fx-background-color: red");
+        //c = Color.color(c.getRed() + incNum, c.getGreen() - incNum, 0);
 
     }
 
