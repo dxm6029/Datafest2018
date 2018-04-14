@@ -2,6 +2,7 @@ package GUI;
 
 import javafx.application.Application;
 import javafx.scene.Scene;
+import javafx.scene.control.Label;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.GridPane;
 import javafx.stage.Stage;
@@ -13,7 +14,6 @@ import java.util.Map;
 public class GUIForYou extends Application{
 
     private int size = 90;
-    private Stage mainStage;
     private Map<String, String> params = null;
     private GridPane grid;
     final int COLUMNS = 12;
@@ -26,7 +26,7 @@ public class GUIForYou extends Application{
 
         for(int x = 0; x < cols; x ++){
             for(int y = 0; y < rows; y++){
-                StateLabel label = new StateLabel();
+                Label label = new Label();
                 label.setMaxSize(size,size);
                 label.setMinSize(size,size);
                 System.out.println("" + x +" " + y);
@@ -35,11 +35,11 @@ public class GUIForYou extends Application{
                         if(y == 0){
                             System.out.println("Alaska");
                             label.setText("AK");
-                            GUI.State state = jobs.get("AK");
-                            label.colorChange(state.getNumJobs());
+                            //GUI.State state = jobs.get("AK");
+                            //label.colorChange(state.getNumJobs());
                         }
                         else if(y == 8){ label.setText("HI");
-                            label.colorChange(jobs.get("HI").getNumJobs());
+                            //label.colorChange(jobs.get("HI").getNumJobs());
                         }
                         break;
                     case 1:
@@ -47,15 +47,15 @@ public class GUIForYou extends Application{
                             case 2:
                                 System.out.println("Washington");
                                 label.setText("WA");
-                                label.colorChange(jobs.get("WA").getNumJobs());
+                                //label.colorChange(jobs.get("WA").getNumJobs());
                                 break;
                             case 3:
                                 label.setText("OR");
-                                label.colorChange(jobs.get("OR").getNumJobs());
+                                //label.colorChange(jobs.get("OR").getNumJobs());
                                 break;
                             case 4:
                                 label.setText("CA");
-                                label.colorChange(jobs.get("CA").getNumJobs());
+                                //label.colorChange(jobs.get("CA").getNumJobs());
                                 break;
                         }
                         break;
@@ -63,19 +63,19 @@ public class GUIForYou extends Application{
                         switch (y){
                             case 2:
                                 label.setText("ID");
-                                label.colorChange(jobs.get("ID").getNumJobs());
+                                //label.colorChange(jobs.get("ID").getNumJobs());
                                 break;
                             case 3:
                                 label.setText("NV");
-                                label.colorChange(jobs.get("NV").getNumJobs());
+                                //label.colorChange(jobs.get("NV").getNumJobs());
                                 break;
                             case 4:
                                 label.setText("UT");
-                                label.colorChange(jobs.get("UT").getNumJobs());
+                                //label.colorChange(jobs.get("UT").getNumJobs());
                                 break;
                             case 5:
                                 label.setText("AZ");
-                                label.colorChange(jobs.get("AZ").getNumJobs());
+                                //label.colorChange(jobs.get("AZ").getNumJobs());
                                 break;
                         }
                         break;
@@ -83,19 +83,19 @@ public class GUIForYou extends Application{
                         switch (y){
                             case 2:
                                 label.setText("MT");
-                                label.colorChange(jobs.get("MT").getNumJobs());
+                                //label.colorChange(jobs.get("MT").getNumJobs());
                                 break;
                             case 3:
                                 label.setText("WY");
-                                label.colorChange(jobs.get("WY").getNumJobs());
+                                //label.colorChange(jobs.get("WY").getNumJobs());
                                 break;
                             case 4:
                                 label.setText("CO");
-                                label.colorChange(jobs.get("CO").getNumJobs());
+                                //label.colorChange(jobs.get("CO").getNumJobs());
                                 break;
                             case 5:
                                 label.setText("NM");
-                                label.colorChange(jobs.get("NM").getNumJobs());
+                                //label.colorChange(jobs.get("NM").getNumJobs());
                                 break;
                         }
                         break;
@@ -103,27 +103,27 @@ public class GUIForYou extends Application{
                         switch (y){
                             case 2:
                                 label.setText("ND");
-                                label.colorChange(jobs.get("ND").getNumJobs());
+                                //label.colorChange(jobs.get("ND").getNumJobs());
                                 break;
                             case 3:
                                 label.setText("SD");
-                                label.colorChange(jobs.get("SD").getNumJobs());
+                                //label.colorChange(jobs.get("SD").getNumJobs());
                                 break;
                             case 4:
                                 label.setText("NB");
-                                label.colorChange(jobs.get("NB").getNumJobs());
+                                //label.colorChange(jobs.get("NB").getNumJobs());
                                 break;
                             case 5:
                                 label.setText("KS");
-                                label.colorChange(jobs.get("KS").getNumJobs());
+                                //label.colorChange(jobs.get("KS").getNumJobs());
                                 break;
                             case 6:
                                 label.setText("OK");
-                                label.colorChange(jobs.get("OK").getNumJobs());
+                                //label.colorChange(jobs.get("OK").getNumJobs());
                                 break;
                             case 7:
                                 label.setText("TX");
-                                label.colorChange(jobs.get("TX").getNumJobs());
+                                //label.colorChange(jobs.get("TX").getNumJobs());
                                 break;
                         }
                         break;
@@ -131,23 +131,23 @@ public class GUIForYou extends Application{
                         switch (y){
                             case 2:
                                 label.setText("MI");
-                                label.colorChange(jobs.get("MI").getNumJobs());
+                                //label.colorChange(jobs.get("MI").getNumJobs());
                                 break;
                             case 3:
                                 label.setText("IA");
-                                label.colorChange(jobs.get("IA").getNumJobs());
+                                //label.colorChange(jobs.get("IA").getNumJobs());
                                 break;
                             case 4:
                                 label.setText("MO");
-                                label.colorChange(jobs.get("MO").getNumJobs());
+                                //label.colorChange(jobs.get("MO").getNumJobs());
                                 break;
                             case 5:
                                 label.setText("AR");
-                                label.colorChange(jobs.get("AR").getNumJobs());
+                                //label.colorChange(jobs.get("AR").getNumJobs());
                                 break;
                             case 6:
                                 label.setText("LA");
-                                label.colorChange(jobs.get("LA").getNumJobs());
+                                //label.colorChange(jobs.get("LA").getNumJobs());
                                 break;
                         }
                         break;
@@ -155,23 +155,23 @@ public class GUIForYou extends Application{
                         switch (y){
                             case 2:
                                 label.setText("IL");
-                                label.colorChange(jobs.get("IL").getNumJobs());
+                                //label.colorChange(jobs.get("IL").getNumJobs());
                                 break;
                             case 3:
                                 label.setText("IN");
-                                label.colorChange(jobs.get("IN").getNumJobs());
+                                //label.colorChange(jobs.get("IN").getNumJobs());
                                 break;
                             case 4:
                                 label.setText("KY");
-                                label.colorChange(jobs.get("KY").getNumJobs());
+                                //label.colorChange(jobs.get("KY").getNumJobs());
                                 break;
                             case 5:
                                 label.setText("TN");
-                                label.colorChange(jobs.get("TN").getNumJobs());
+                                //label.colorChange(jobs.get("TN").getNumJobs());
                                 break;
                             case 6:
                                 label.setText("MS");
-                                label.colorChange(jobs.get("MS").getNumJobs());
+                                //label.colorChange(jobs.get("MS").getNumJobs());
                                 break;
                         }
                         break;
@@ -179,23 +179,23 @@ public class GUIForYou extends Application{
                         switch (y){
                             case 2:
                                 label.setText("WI");
-                                label.colorChange(jobs.get("WI").getNumJobs());
+                                //label.colorChange(jobs.get("WI").getNumJobs());
                                 break;
                             case 3:
                                 label.setText("OH");
-                                label.colorChange(jobs.get("OH").getNumJobs());
+                                //label.colorChange(jobs.get("OH").getNumJobs());
                                 break;
                             case 4:
                                 label.setText("WV");
-                                label.colorChange(jobs.get("WV").getNumJobs());
+                                //label.colorChange(jobs.get("WV").getNumJobs());
                                 break;
                             case 5:
                                 label.setText("NC");
-                                label.colorChange(jobs.get("NC").getNumJobs());
+                                //label.colorChange(jobs.get("NC").getNumJobs());
                                 break;
                             case 6:
                                 label.setText("AL");
-                                label.colorChange(jobs.get("AL").getNumJobs());
+                                //label.colorChange(jobs.get("AL").getNumJobs());
                                 break;
                         }
                         break;
@@ -203,23 +203,23 @@ public class GUIForYou extends Application{
                         switch (y){
                             case 2:
                                 label.setText("MI");
-                                label.colorChange(jobs.get("MI").getNumJobs());
+                                //label.colorChange(jobs.get("MI").getNumJobs());
                                 break;
                             case 3:
                                 label.setText("PA");
-                                label.colorChange(jobs.get("PA").getNumJobs());
+                                //label.colorChange(jobs.get("PA").getNumJobs());
                                 break;
                             case 4:
                                 label.setText("VA");
-                                label.colorChange(jobs.get("VA").getNumJobs());
+                                //label.colorChange(jobs.get("VA").getNumJobs());
                                 break;
                             case 5:
                                 label.setText("SC");
-                                label.colorChange(jobs.get("SC").getNumJobs());
+                                //label.colorChange(jobs.get("SC").getNumJobs());
                                 break;
                             case 6:
                                 label.setText("GA");
-                                label.colorChange(jobs.get("GA").getNumJobs());
+                                //label.colorChange(jobs.get("GA").getNumJobs());
                                 break;
                         }
                         break;
@@ -227,23 +227,23 @@ public class GUIForYou extends Application{
                         switch (y){
                             case 2:
                                 label.setText("NY");
-                                label.colorChange(jobs.get("NY").getNumJobs());
+                                //label.colorChange(jobs.get("NY").getNumJobs());
                                 break;
                             case 3:
                                 label.setText("NJ");
-                                label.colorChange(jobs.get("NJ").getNumJobs());
+                                //label.colorChange(jobs.get("NJ").getNumJobs());
                                 break;
                             case 4:
                                 label.setText("MD");
-                                label.colorChange(jobs.get("MD").getNumJobs());
+                                //label.colorChange(jobs.get("MD").getNumJobs());
                                 break;
                             case 5:
                                 label.setText("D.C.");
-                                label.colorChange(jobs.get("DC").getNumJobs());
+                                //label.colorChange(jobs.get("DC").getNumJobs());
                                 break;
                             case 7:
                                 label.setText("FL");
-                                label.colorChange(jobs.get("FL").getNumJobs());
+                                //label.colorChange(jobs.get("FL").getNumJobs());
                                 break;
                         }
                         break;
@@ -251,19 +251,19 @@ public class GUIForYou extends Application{
                         switch (y){
                             case 1:
                                 label.setText("VT");
-                                label.colorChange(jobs.get("VT").getNumJobs());
+                                //label.colorChange(jobs.get("VT").getNumJobs());
                                 break;
                             case 2:
                                 label.setText("RI");
-                                label.colorChange(jobs.get("RI").getNumJobs());
+                                //label.colorChange(jobs.get("RI").getNumJobs());
                                 break;
                             case 3:
                                 label.setText("CT");
-                                label.colorChange(jobs.get("CT").getNumJobs());
+                                //label.colorChange(jobs.get("CT").getNumJobs());
                                 break;
                             case 4:
                                 label.setText("DE");
-                                label.colorChange(jobs.get("DE").getNumJobs());
+                                //label.colorChange(jobs.get("DE").getNumJobs());
                                 break;
                         }
                         break;
@@ -271,21 +271,21 @@ public class GUIForYou extends Application{
                         switch (y){
                             case 0:
                                 label.setText("ME");
-                                label.colorChange(jobs.get("ME").getNumJobs());
+                                //label.colorChange(jobs.get("ME").getNumJobs());
                                 break;
                             case 1:
                                 label.setText("NH");
-                                label.colorChange(jobs.get("NH").getNumJobs());
+                                //label.colorChange(jobs.get("NH").getNumJobs());
                                 break;
                             case 2:
                                 label.setText("MA");
-                                label.colorChange(jobs.get("MA").getNumJobs());
+                                //label.colorChange(jobs.get("MA").getNumJobs());
                                 break;
                         }
                         break;
                 }
                 grid.add(label, x, y);
-                labels[x][y] = label;
+                //labels[x][y] = label;
             }
         }
         return grid;
@@ -293,10 +293,10 @@ public class GUIForYou extends Application{
 
     public void start(Stage mainStage) {
         System.out.println("HI");
-        this.mainStage = mainStage;
         mainStage.setTitle("Data");
         BorderPane totalPane = new BorderPane();
         Map<String, GUI.State> mapy = new HashMap<>();
+        /*
         for (int i = 0; i<map.size(); ++i){
             List str = (List)map.keySet();
             String s = (String)str.get(i);
@@ -306,6 +306,7 @@ public class GUIForYou extends Application{
             GUI.State state = new GUI.State(st,map.get(s).intValue());
             mapy.put(st,state);
         }
+        */
         GridPane statesPane = makeGridPane(COLUMNS, ROWS, mapy);
         totalPane.setCenter(statesPane);
         mainStage.setScene(new Scene(totalPane));
