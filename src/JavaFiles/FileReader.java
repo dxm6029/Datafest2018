@@ -66,7 +66,6 @@ public class FileReader{
                 else{
                     jobMap.put(line[10], new HashMap<>());
                 }
-
             }
 
             SortedSet<String> keys = new TreeSet<>(jobMap.keySet());

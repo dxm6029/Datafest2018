@@ -1,11 +1,12 @@
 package JavaFiles;
 
 import java.util.HashMap;
+import java.util.Map;
 
 public class Job {
-    private HashMap<String, Integer> jobs;
+    private Map<String, Integer> jobs;
 
-    public Job(HashMap jobs){
+    public Job(Map<String, Integer> jobs){
         this.jobs = jobs;
     }
 
