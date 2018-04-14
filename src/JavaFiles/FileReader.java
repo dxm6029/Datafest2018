@@ -13,7 +13,7 @@ public class FileReader {
         map = new HashMap<>();
 
         try {
-            InputStream in = new FileInputStream("textFiles/data.txt");
+            InputStream in = new FileInputStream("newData/data.txt");
             BufferedReader bf = new BufferedReader(new InputStreamReader(in));
             //bf = new BufferedReader(new FileReader(new FileOutputStream("testFiles/Data.txt")));
             bf.readLine();
