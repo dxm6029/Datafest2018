@@ -43,7 +43,7 @@ public class FileReader extends Application{
         System.out.println("File: " + file);
 
         map = new HashMap<>();
-        njobMap = new HashMap<>();
+        jobMap = new HashMap<>();
         sJobMap = new HashMap<>();
         try {
             InputStream in = new FileInputStream(file);
@@ -59,17 +59,18 @@ public class FileReader extends Application{
                 else{
                     map.put(line[4], 1);
                 }
-                if(njobMap.containsKey(line[10])) {
-                    njobMap.put(line[10], njobMap.get(line[10])+1);
+                if(jobMap.containsKey(line[10])) {
+                    if(jobMap.get(line[10]).containsKey(line[9])){
+                        sJobMap.put(line[9], sJobMap.get(line[9])+1);
+                        jobMap.put(line[10], sJobMap);
+                    }
+                    else{
+                        sJobMap.put(line[9], 1);
+                        jobMap.put(line[10], sJobMap);
+                    }
                 }
                 else{
-                    njobMap.put(line[10], 1);
-                }
-                if(sJobMap.containsKey(line[9])) {
-                    sJobMap.put(line[9], sJobMap.get(line[9])+1);
-                }
-                else{
-                    sJobMap.put(line[9], 1);
+                    jobMap.put(line[10], new HashMap<>());
                 }
 
             }
@@ -78,9 +79,12 @@ public class FileReader extends Application{
             //    System.out.println("State: " + s + "    count: " + map.get(s));
             //}
             SortedSet<String> keys = new TreeSet<>(jobMap.keySet());
+            System.out.println("START");
             for(String job: keys){
-                System.out.print(String.format("%-30s%s%n", "Job: " + job, " count: " + jobMap.get(job)));
-                //System.out.println("Job: " + job + " count: " + jobMap.get(job) );
+                for(String j: jobMap.get(job).keySet()){
+                    System.out.print(String.format("%-30s%s", "Category: " + job,
+                            String.format("%-30s%s%n", "Job: " + j, " count: " + jobMap.get(job).get(j))));
+                }
             }
             */
         }
