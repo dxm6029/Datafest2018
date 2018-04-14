@@ -283,9 +283,8 @@ public class GUIForYou extends Application{
 
 
 
-    public static void displayMap(StateLabel state, int count){
-
-
+    public void displayMap(int row, int col , int count){
+        labels[row][col].colorChange(count);
     }
 
     public static void main(String[] args) {
