@@ -326,6 +326,7 @@ public class GUIForYou extends Application{
                     "Parameter '--" + name + "=xxx' missing."
             );
         } else {
+
             return params.get(name);
         }
     }
