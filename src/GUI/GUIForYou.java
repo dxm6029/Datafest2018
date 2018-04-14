@@ -307,7 +307,10 @@ public class GUIForYou extends Application{
         Map<String, Integer> map = fr.readFile(getParamNamed("file"));
         Map<String, GUI.State> mapy = new HashMap<>();
         for(String s: map.keySet()){
-            GUI.State state = new GUI.State(s,map.get(s).intValue());
+            System.out.println(s);
+            String st = s.substring(1,3);
+            System.out.println(st);
+            GUI.State state = new GUI.State(st,map.get(s).intValue());
             mapy.put(s,state);
         }
         final int COLUMNS = 12;

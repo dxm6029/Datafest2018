@@ -54,7 +54,7 @@ public class FileReader {
 
             SortedSet<String> keys = new TreeSet<>(jobMap.keySet());
             for(String job: keys){
-                System.out.println(job);
+                //System.out.println(job);
                 //for(String j: jobMap.get(job).keySet()){
                     //System.out.print(String.format("%-30s%s", "Category: " + job,
                       //      String.format("%-30s%s%n", "Job: " + j, " count: " + jobMap.get(job).get(j))));
