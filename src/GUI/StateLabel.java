@@ -17,6 +17,7 @@ public class StateLabel extends Label {
         double incNum = count/2;
         c = Color.color(c.getRed() + incNum, c.getGreen() - incNum, 0);
 
+
     }
 
 }
