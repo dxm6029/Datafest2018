@@ -1,14 +1,41 @@
 package GUI;
 
 import javafx.application.Application;
+import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.layout.GridPane;
 import javafx.stage.Stage;
 
 
-public class Gobui extends GridPane{
+public class Gobui extends Application{
 
-    public Gobui(){
+    String [] stringy = {"--file=newData/data.txt"};
+
+    @Override
+    public void init() {
+
+    }
+
+    @Override
+    public void start(Stage mainStage){
+        GridPane pane = new GridPane();
+        mainStage.setResizable(false);
+        Button jobs = new Button("Jobs");
+        jobs.setOnAction(e -> {
+            javafx.application.Platform.runLater(new Runnable() {
+                @Override
+                public void run() {
+                    GUIForYou.main(stringy);
+                }
+            });
+        });
+        pane.add(jobs, 0, 0);
+
+        mainStage.setScene(new Scene(pane));
+        mainStage.show();
+        mainStage.setAlwaysOnTop(true);
+    }
+        /*
         Button accounting = new Button("Accounting");
         Button admin = new Button("Administration");
         Button arch = new Button("Architecture");
@@ -63,5 +90,6 @@ public class Gobui extends GridPane{
 
 
     }
+    */
 
 }
