@@ -337,15 +337,15 @@ public class GUIForYou extends Application{
 
         double incNum = mostJobs / 6;
 
-        if (num < incNum)
+        if (num < incNum*.5)
             label.setStyle("-fx-background-color: " + c[0]);
-        else if (num < incNum * 2)
+        else if (num < incNum )
             label.setStyle("-fx-background-color: " + c[1]);
-        else if (num < incNum * 3)
+        else if (num < incNum * 2)
             label.setStyle("-fx-background-color: " + c[2]);
-        else if (num < incNum * 4)
+        else if (num < incNum * 3)
             label.setStyle("-fx-background-color: " + c[3]);
-        else if (num < incNum * 5)
+        else if (num < incNum * 4)
             label.setStyle("-fx-background-color: " + c[4]);
         else
             label.setStyle("-fx-background-color: " + c[5]);
