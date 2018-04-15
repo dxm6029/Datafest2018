@@ -41,6 +41,7 @@ public class GUIForYou extends Application{
                             System.out.println(jobs);
                             if(jobs.containsKey("AK")) {
                                 colorize(label, jobs.get("AK").intValue());
+                                label.setAlignment(Pos.CENTER);
                                 label.setTextFill(Paint.valueOf("white"));
                             }
 
@@ -48,6 +49,7 @@ public class GUIForYou extends Application{
                         else if(y == 8){ label.setText("HI");
                             if(jobs.containsKey("HI")) {
                                 colorize(label, jobs.get("HI").intValue());
+                                label.setAlignment(Pos.CENTER);
                                 label.setTextFill(Paint.valueOf("white"));
                             }
                         }
