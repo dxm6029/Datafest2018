@@ -36,7 +36,6 @@ public class GUIForYou extends Application{
                         if(y == 0){
                             label.setText("AK");
                             label.setTextFill(Paint.valueOf("white"));
-
                             //GUI.State state = jobs.get("AK");
                             System.out.println(jobs);
                             if(jobs.containsKey("AK"))
@@ -211,28 +210,38 @@ public class GUIForYou extends Application{
                         switch (y){
                             case 2:
                                 label.setText("WI");
-                                if(jobs.containsKey("WI"))
+                                if(jobs.containsKey("WI")) {
                                     colorize(label, jobs.get("WI").intValue());
+                                    label.setTextFill(Paint.valueOf("white"));
+                                }
                                 break;
                             case 3:
                                 label.setText("OH");
-                                if(jobs.containsKey("OH"))
+                                if(jobs.containsKey("OH")) {
                                     colorize(label, jobs.get("OH").intValue());
+                                    label.setTextFill(Paint.valueOf("white"));
+                                }
                                 break;
                             case 4:
                                 label.setText("WV");
-                                if(jobs.containsKey("WV"))
+                                if(jobs.containsKey("WV")) {
                                     colorize(label, jobs.get("WV").intValue());
+                                    label.setTextFill(Paint.valueOf("white"));
+                                }
                                 break;
                             case 5:
                                 label.setText("NC");
-                                if(jobs.containsKey("NC"))
+                                if(jobs.containsKey("NC")) {
                                     colorize(label, jobs.get("NC").intValue());
+                                    label.setTextFill(Paint.valueOf("white"));
+                                }
                                 break;
                             case 6:
                                 label.setText("AL");
-                                if(jobs.containsKey("AL"))
+                                if(jobs.containsKey("AL")) {
                                     colorize(label, jobs.get("AL").intValue());
+                                    label.setTextFill(Paint.valueOf("white"));
+                                }
                                 break;
                         }
                         break;
@@ -240,84 +249,136 @@ public class GUIForYou extends Application{
                         switch (y){
                             case 2:
                                 label.setText("MI");
-                                if(jobs.containsKey("MI"))
-                                    colorize(label, jobs.get("MI").intValue());                                break;
+                                if(jobs.containsKey("MI")) {
+                                    colorize(label, jobs.get("MI").intValue());
+                                    label.setTextFill(Paint.valueOf("white"));
+                                }
+                                break;
                             case 3:
                                 label.setText("PA");
-                                if(jobs.containsKey("PA"))
-                                    colorize(label, jobs.get("PA").intValue());                                break;
+                                if(jobs.containsKey("PA")) {
+                                    colorize(label, jobs.get("PA").intValue());
+                                    label.setTextFill(Paint.valueOf("white"));
+                                }
+                                break;
                             case 4:
                                 label.setText("VA");
-                                if(jobs.containsKey("VA"))
-                                    colorize(label, jobs.get("VA").intValue());                                break;
+                                if(jobs.containsKey("VA")) {
+                                    colorize(label, jobs.get("VA").intValue());
+                                    label.setTextFill(Paint.valueOf("white"));
+                                }
+                                break;
                             case 5:
                                 label.setText("SC");
-                                if(jobs.containsKey("SC"))
-                                    colorize(label, jobs.get("SC").intValue());                                break;
+                                if(jobs.containsKey("SC")) {
+                                    colorize(label, jobs.get("SC").intValue());
+                                    label.setTextFill(Paint.valueOf("white"));
+                                }
+                                break;
                             case 6:
                                 label.setText("GA");
-                                if(jobs.containsKey("GA"))
-                                    colorize(label, jobs.get("GA").intValue());                                break;
+                                if(jobs.containsKey("GA")) {
+                                    colorize(label, jobs.get("GA").intValue());
+                                    label.setTextFill(Paint.valueOf("white"));
+                                }
+                                break;
                         }
                         break;
                     case 9:
                         switch (y){
                             case 2:
                                 label.setText("NY");
-                                if(jobs.containsKey("NY"))
-                                    colorize(label, jobs.get("NY").intValue());                                break;
+                                if(jobs.containsKey("NY")) {
+                                    colorize(label, jobs.get("NY").intValue());
+                                    label.setTextFill(Paint.valueOf("white"));
+                                }
+                                break;
                             case 3:
                                 label.setText("NJ");
-                                if(jobs.containsKey("NJ"))
-                                    colorize(label, jobs.get("NJ").intValue());                                break;
+                                if(jobs.containsKey("NJ")) {
+                                    colorize(label, jobs.get("NJ").intValue());
+                                    label.setTextFill(Paint.valueOf("white"));
+                                }
+                                break;
                             case 4:
                                 label.setText("MD");
-                                if(jobs.containsKey("MD"))
-                                    colorize(label, jobs.get("MD").intValue());                                break;
+                                if(jobs.containsKey("MD")) {
+                                    colorize(label, jobs.get("MD").intValue());
+                                    label.setTextFill(Paint.valueOf("white"));
+                                }
+                                break;
                             case 5:
                                 label.setText("D.C.");
-                                if(jobs.containsKey("DC"))
-                                    colorize(label, jobs.get("DC").intValue());                                break;
+                                if(jobs.containsKey("DC")) {
+                                    colorize(label, jobs.get("DC").intValue());
+                                    label.setTextFill(Paint.valueOf("white"));
+                                }
+                                break;
+
                             case 7:
                                 label.setText("FL");
-                                if(jobs.containsKey("FL"))
-                                    colorize(label, jobs.get("FL").intValue());                                break;
+                                if(jobs.containsKey("FL")) {
+                                    colorize(label, jobs.get("FL").intValue());
+                                    label.setTextFill(Paint.valueOf("white"));
+                                }
+                                break;
                         }
                         break;
                     case 10:
                         switch (y){
                             case 1:
                                 label.setText("VT");
-                                if(jobs.containsKey("VT"))
-                                    colorize(label, jobs.get("VT").intValue());                                break;
+                                if(jobs.containsKey("VT")) {
+                                    colorize(label, jobs.get("VT").intValue());
+                                    label.setTextFill(Paint.valueOf("white"));
+                                }
+                                break;
                             case 2:
                                 label.setText("RI");
-                                if(jobs.containsKey("RI"))
-                                    colorize(label, jobs.get("RI").intValue());                                break;
+                                if(jobs.containsKey("RI")) {
+                                    colorize(label, jobs.get("RI").intValue());
+                                    label.setTextFill(Paint.valueOf("white"));
+                                }
+                                break;
                             case 3:
                                 label.setText("CT");
-                                if(jobs.containsKey("CT"))
-                                    colorize(label, jobs.get("CT").intValue());                                break;
+                                if(jobs.containsKey("CT")) {
+                                    colorize(label, jobs.get("CT").intValue());
+                                    label.setTextFill(Paint.valueOf("white"));
+                                }
+                                break;
                             case 4:
                                 label.setText("DE");
-                                if(jobs.containsKey("DE"))
-                                    colorize(label, jobs.get("DE").intValue());                                break;
+                                if(jobs.containsKey("DE")) {
+                                    colorize(label, jobs.get("DE").intValue());
+                                    label.setTextFill(Paint.valueOf("white"));
+                                }
+                                break;
                         }
                         break;
                     case 11:
                         switch (y){
                             case 0:
                                 label.setText("ME");
-                                if(jobs.containsKey("ME"))
-                                    colorize(label, jobs.get("ME").intValue());                                break;
+                                if(jobs.containsKey("ME")) {
+                                    colorize(label, jobs.get("ME").intValue());
+                                    label.setTextFill(Paint.valueOf("white"));
+                                }
+                                break;
                             case 1:
                                 label.setText("NH");
-                                if(jobs.containsKey("NH"))
-                                    colorize(label, jobs.get("NH").intValue());                                break;
+                                if(jobs.containsKey("NH")) {
+                                    colorize(label, jobs.get("NH").intValue());
+                                    label.setTextFill(Paint.valueOf("white"));
+                                }
+                                break;
                             case 2:
                                 label.setText("MA");
-                                if(jobs.containsKey("MA"))
-                                    colorize(label, jobs.get("MA").intValue());                                break;
+                                if(jobs.containsKey("MA")) {
+                                    colorize(label, jobs.get("MA").intValue());
+                                    label.setTextFill(Paint.valueOf("white"));
+                                }
+                                break;
                         }
                         break;
                 }
