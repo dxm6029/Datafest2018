@@ -213,6 +213,7 @@ public class GUIForYou extends Application{
                                 if(jobs.containsKey("WI")) {
                                     colorize(label, jobs.get("WI").intValue());
                                     label.setTextFill(Paint.valueOf("white"));
+
                                 }
                                 break;
                             case 3:
