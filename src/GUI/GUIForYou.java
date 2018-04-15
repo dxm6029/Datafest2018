@@ -5,8 +5,10 @@ import javafx.scene.Scene;
 import javafx.scene.control.Label;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.GridPane;
+import javafx.scene.paint.Paint;
 import javafx.stage.Stage;
 
+import java.awt.*;
 import java.util.*;
 
 public class GUIForYou extends Application{
@@ -33,10 +35,13 @@ public class GUIForYou extends Application{
                     case 0:
                         if(y == 0){
                             label.setText("AK");
+                            label.setTextFill(Paint.valueOf("white"));
+
                             //GUI.State state = jobs.get("AK");
                             System.out.println(jobs);
                             if(jobs.containsKey("AK"))
                                 colorize(label, jobs.get("AK").intValue());
+
                         }
                         else if(y == 8){ label.setText("HI");
                             if(jobs.containsKey("HI"))
@@ -331,9 +336,9 @@ public class GUIForYou extends Application{
         c[0] = "darkgreen";
         c[1] = "green";
         c[2] = "lightgreen";
-        c[3] = "pink";
-        c[4] = "red";
-        c[5] = "darkred";
+        c[3] = "lightblue";
+        c[4] = "blue";
+        c[5] = "darkblue";
 
         double incNum = mostJobs / 6;
 
