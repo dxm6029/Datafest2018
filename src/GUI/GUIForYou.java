@@ -235,84 +235,84 @@ public class GUIForYou extends Application{
                         switch (y){
                             case 2:
                                 label.setText("MI");
-                                //label.colorChange(jobs.get("MI").getNumJobs());
-                                break;
+                                if(jobs.containsKey("MI"))
+                                    colorize(label, jobs.get("MI").intValue());                                break;
                             case 3:
                                 label.setText("PA");
-                                //label.colorChange(jobs.get("PA").getNumJobs());
-                                break;
+                                if(jobs.containsKey("PA"))
+                                    colorize(label, jobs.get("PA").intValue());                                break;
                             case 4:
                                 label.setText("VA");
-                                //label.colorChange(jobs.get("VA").getNumJobs());
-                                break;
+                                if(jobs.containsKey("VA"))
+                                    colorize(label, jobs.get("VA").intValue());                                break;
                             case 5:
                                 label.setText("SC");
-                                //label.colorChange(jobs.get("SC").getNumJobs());
-                                break;
+                                if(jobs.containsKey("SC"))
+                                    colorize(label, jobs.get("SC").intValue());                                break;
                             case 6:
                                 label.setText("GA");
-                                //label.colorChange(jobs.get("GA").getNumJobs());
-                                break;
+                                if(jobs.containsKey("GA"))
+                                    colorize(label, jobs.get("GA").intValue());                                break;
                         }
                         break;
                     case 9:
                         switch (y){
                             case 2:
                                 label.setText("NY");
-                                //label.colorChange(jobs.get("NY").getNumJobs());
-                                break;
+                                if(jobs.containsKey("NY"))
+                                    colorize(label, jobs.get("NY").intValue());                                break;
                             case 3:
                                 label.setText("NJ");
-                                //label.colorChange(jobs.get("NJ").getNumJobs());
-                                break;
+                                if(jobs.containsKey("NJ"))
+                                    colorize(label, jobs.get("NJ").intValue());                                break;
                             case 4:
                                 label.setText("MD");
-                                //label.colorChange(jobs.get("MD").getNumJobs());
-                                break;
+                                if(jobs.containsKey("MD"))
+                                    colorize(label, jobs.get("MD").intValue());                                break;
                             case 5:
                                 label.setText("D.C.");
-                                //label.colorChange(jobs.get("DC").getNumJobs());
-                                break;
+                                if(jobs.containsKey("DC"))
+                                    colorize(label, jobs.get("DC").intValue());                                break;
                             case 7:
                                 label.setText("FL");
-                                //label.colorChange(jobs.get("FL").getNumJobs());
-                                break;
+                                if(jobs.containsKey("FL"))
+                                    colorize(label, jobs.get("FL").intValue());                                break;
                         }
                         break;
                     case 10:
                         switch (y){
                             case 1:
                                 label.setText("VT");
-                                //label.colorChange(jobs.get("VT").getNumJobs());
-                                break;
+                                if(jobs.containsKey("VT"))
+                                    colorize(label, jobs.get("VT").intValue());                                break;
                             case 2:
                                 label.setText("RI");
-                                //label.colorChange(jobs.get("RI").getNumJobs());
-                                break;
+                                if(jobs.containsKey("RI"))
+                                    colorize(label, jobs.get("RI").intValue());                                break;
                             case 3:
                                 label.setText("CT");
-                                //label.colorChange(jobs.get("CT").getNumJobs());
-                                break;
+                                if(jobs.containsKey("CT"))
+                                    colorize(label, jobs.get("CT").intValue());                                break;
                             case 4:
                                 label.setText("DE");
-                                //label.colorChange(jobs.get("DE").getNumJobs());
-                                break;
+                                if(jobs.containsKey("DE"))
+                                    colorize(label, jobs.get("DE").intValue());                                break;
                         }
                         break;
                     case 11:
                         switch (y){
                             case 0:
                                 label.setText("ME");
-                                //label.colorChange(jobs.get("ME").getNumJobs());
-                                break;
+                                if(jobs.containsKey("ME"))
+                                    colorize(label, jobs.get("ME").intValue());                                break;
                             case 1:
                                 label.setText("NH");
-                                //label.colorChange(jobs.get("NH").getNumJobs());
-                                break;
+                                if(jobs.containsKey("NH"))
+                                    colorize(label, jobs.get("NH").intValue());                                break;
                             case 2:
                                 label.setText("MA");
-                                //label.colorChange(jobs.get("MA").getNumJobs());
-                                break;
+                                if(jobs.containsKey("MA"))
+                                    colorize(label, jobs.get("MA").intValue());                                break;
                         }
                         break;
                 }

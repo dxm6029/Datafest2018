@@ -15,7 +15,7 @@ public class Reader {
             InputStream in = new FileInputStream(file);
             BufferedReader bf = new BufferedReader(new InputStreamReader(in));
             bf.readLine();
-            String[] line = bf.readLine().split(",");
+            String[] line;
             String l;
             while ((l = bf.readLine()) != null) {
                 Jobs = new HashMap<>();
