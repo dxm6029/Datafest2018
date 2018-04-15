@@ -31,11 +31,11 @@ public class FileReader {
             String l;
             while ((l = bf.readLine()) !=null){
                 line = l.split(",");
-                if(map.containsKey(line[4])) {
-                    map.put(line[4], map.get(line[4])+1);
+                if(map.containsKey(line[4].substring(1,3))) {
+                    map.put(line[4].substring(1,3), map.get(line[4].substring(1,3))+1);
                 }
                 else{
-                    map.put(line[4], 1);
+                    map.put(line[4].substring(1,3), 1);
                 }
                 if(jobMap.containsKey(line[10])) {
                     if(jobMap.get(line[10]).containsKey(line[9])){

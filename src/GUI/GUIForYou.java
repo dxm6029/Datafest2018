@@ -7,9 +7,7 @@ import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.GridPane;
 import javafx.stage.Stage;
 
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 
 public class GUIForYou extends Application{
 
@@ -20,8 +18,9 @@ public class GUIForYou extends Application{
     final int ROWS = 9;
     private StateLabel [][] labels = new StateLabel[COLUMNS][ROWS];
     private Map<String, Integer> map;
+    private int mostJobs;
 
-    private GridPane makeGridPane(int cols, int rows, Map<String, GUI.State> jobs){
+    private GridPane makeGridPane(int cols, int rows, Map<String, Integer> jobs){
         grid = new GridPane();
 
         for(int x = 0; x < cols; x ++){
@@ -36,10 +35,13 @@ public class GUIForYou extends Application{
                             System.out.println("Alaska");
                             label.setText("AK");
                             //GUI.State state = jobs.get("AK");
-                            //label.colorChange(state.getNumJobs());
+                            System.out.println(jobs);
+                            if(jobs.containsKey("AK"))
+                                colorize(label, jobs.get("AK").intValue());
                         }
                         else if(y == 8){ label.setText("HI");
-                            //label.colorChange(jobs.get("HI").getNumJobs());
+                            if(jobs.containsKey("HI"))
+                                colorize(label, jobs.get("HI").intValue());
                         }
                         break;
                     case 1:
@@ -291,23 +293,42 @@ public class GUIForYou extends Application{
         return grid;
     }
 
+
+    private void colorize(Label label, int num) {
+        String[] c;
+
+        c = new String[6];
+        c[0] = "purple";
+        c[1] = "blue";
+        c[2] = "green";
+        c[3] = "yellow";
+        c[4] = "orange";
+        c[5] = "red";
+
+        double incNum = mostJobs / 6;
+
+        if (num < incNum)
+            label.setStyle("-fx-background-color: " + c[0]);
+        else if (num < incNum * 2)
+            label.setStyle("-fx-background-color: " + c[1]);
+        else if (num < incNum * 3)
+            label.setStyle("-fx-background-color: " + c[2]);
+        else if (num < incNum * 4)
+            label.setStyle("-fx-background-color: " + c[3]);
+        else if (num < incNum * 5)
+            label.setStyle("-fx-background-color: " + c[4]);
+        else
+            label.setStyle("-fx-background-color: " + c[5]);
+    }
+
+
     public void start(Stage mainStage) {
         System.out.println("HI");
         mainStage.setTitle("Data");
         BorderPane totalPane = new BorderPane();
         Map<String, GUI.State> mapy = new HashMap<>();
-        /*
-        for (int i = 0; i<map.size(); ++i){
-            List str = (List)map.keySet();
-            String s = (String)str.get(i);
-            System.out.println(s);
-            String st = s.substring(1,3);
-            System.out.println(st);
-            GUI.State state = new GUI.State(st,map.get(s).intValue());
-            mapy.put(st,state);
-        }
-        */
-        GridPane statesPane = makeGridPane(COLUMNS, ROWS, mapy);
+        System.out.println(map);
+        GridPane statesPane = makeGridPane(COLUMNS, ROWS, map);
         totalPane.setCenter(statesPane);
         mainStage.setScene(new Scene(totalPane));
         mainStage.show();
@@ -321,8 +342,24 @@ public class GUIForYou extends Application{
     @Override
     public void init() throws java.lang.Exception{
         FileReader fr = new FileReader();
-        Map<String, Integer> map = fr.readFile(getParamNamed("file"));
+        map = fr.readFile(getParamNamed("file"));
+        System.out.println(map);
+        getMostJobs(map);
+        System.out.println(map);
 
+    }
+
+    private void getMostJobs(Map<String, Integer> mapy){
+        int hold = 0;
+        Iterator it = mapy.entrySet().iterator();
+        while (it.hasNext()) {
+            Map.Entry pair = (Map.Entry)it.next();
+            Integer temp = (Integer)pair.getValue();
+            if(temp.intValue() > hold)
+                hold = temp.intValue();
+            //it.remove();//avoid exception
+        }
+        mostJobs = hold;
     }
 
     private String getParamNamed(String name)throws java.lang.Exception{
