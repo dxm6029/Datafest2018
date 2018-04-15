@@ -1,10 +1,12 @@
 package GUI;
 
 import javafx.application.Application;
+import javafx.geometry.Pos;
 import javafx.scene.Scene;
 import javafx.scene.control.Label;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.GridPane;
+import javafx.scene.layout.HBox;
 import javafx.scene.paint.Paint;
 import javafx.stage.Stage;
 
@@ -484,6 +486,25 @@ public class GUIForYou extends Application{
         System.out.println(map);
         GridPane statesPane = makeGridPane(COLUMNS, ROWS, map);
         totalPane.setCenter(statesPane);
+        HBox hbox = new HBox();
+        hbox.getChildren().add(new Label("Least Jobs"));
+        String[] c = new String[6];
+        c[0] = "darkgreen";
+        c[1] = "green";
+        c[2] = "lightgreen";
+        c[3] = "lightblue";
+        c[4] = "blue";
+        c[5] = "darkblue";
+        for(String color: c){
+            Label label = new Label();
+            label.setStyle("-fx-background-color: " + color);
+            label.setMaxSize(25, 25);
+            label.setMinSize(25, 25);
+            hbox.getChildren().add(label);
+        }
+        hbox.getChildren().add(new Label("Most Jobs"));
+        hbox.setAlignment(Pos.BOTTOM_RIGHT);
+        totalPane.setBottom(hbox);
         mainStage.setScene(new Scene(totalPane));
         mainStage.show();
         mainStage.setAlwaysOnTop(true);
