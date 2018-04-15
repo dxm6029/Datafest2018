@@ -232,6 +232,7 @@ public class GUIForYou extends Application{
                         switch (y){
                             case 2:
                                 label.setText("IL");
+                                label.setAlignment(Pos.CENTER);
                                 if(jobs.containsKey("IL")) {
                                     label.setTextFill(Paint.valueOf("white"));
                                     colorize(label, jobs.get("IL").intValue());
@@ -239,6 +240,7 @@ public class GUIForYou extends Application{
                                 break;
                             case 3:
                                 label.setText("IN");
+                                label.setAlignment(Pos.CENTER);
                                 if(jobs.containsKey("IN")) {
                                     label.setTextFill(Paint.valueOf("white"));
                                     colorize(label, jobs.get("IN").intValue());
@@ -246,6 +248,7 @@ public class GUIForYou extends Application{
                                 break;
                             case 4:
                                 label.setText("KY");
+                                label.setAlignment(Pos.CENTER);
                                 if(jobs.containsKey("KY")) {
                                     label.setTextFill(Paint.valueOf("white"));
                                     colorize(label, jobs.get("KY").intValue());
@@ -253,6 +256,7 @@ public class GUIForYou extends Application{
                                 break;
                             case 5:
                                 label.setText("TN");
+                                label.setAlignment(Pos.CENTER);
                                 if(jobs.containsKey("TN")) {
                                     label.setTextFill(Paint.valueOf("white"));
                                     colorize(label, jobs.get("TN").intValue());
@@ -260,6 +264,7 @@ public class GUIForYou extends Application{
                                 break;
                             case 6:
                                 label.setText("MS");
+                                label.setAlignment(Pos.CENTER);
                                 if(jobs.containsKey("MS")) {
                                     label.setTextFill(Paint.valueOf("white"));
                                     colorize(label, jobs.get("MS").intValue());
@@ -271,6 +276,7 @@ public class GUIForYou extends Application{
                         switch (y){
                             case 2:
                                 label.setText("WI");
+                                label.setAlignment(Pos.CENTER);
                                 if(jobs.containsKey("WI")) {
                                     colorize(label, jobs.get("WI").intValue());
                                     label.setTextFill(Paint.valueOf("white"));
@@ -278,6 +284,7 @@ public class GUIForYou extends Application{
                                 break;
                             case 3:
                                 label.setText("OH");
+                                label.setAlignment(Pos.CENTER);
                                 if(jobs.containsKey("OH")) {
                                     colorize(label, jobs.get("OH").intValue());
                                     label.setTextFill(Paint.valueOf("white"));
@@ -285,6 +292,7 @@ public class GUIForYou extends Application{
                                 break;
                             case 4:
                                 label.setText("WV");
+                                label.setAlignment(Pos.CENTER);
                                 if(jobs.containsKey("WV")) {
                                     colorize(label, jobs.get("WV").intValue());
                                     label.setTextFill(Paint.valueOf("white"));
@@ -292,6 +300,7 @@ public class GUIForYou extends Application{
                                 break;
                             case 5:
                                 label.setText("NC");
+                                label.setAlignment(Pos.CENTER);
                                 if(jobs.containsKey("NC")) {
                                     colorize(label, jobs.get("NC").intValue());
                                     label.setTextFill(Paint.valueOf("white"));
@@ -299,6 +308,7 @@ public class GUIForYou extends Application{
                                 break;
                             case 6:
                                 label.setText("AL");
+                                label.setAlignment(Pos.CENTER);
                                 if(jobs.containsKey("AL")) {
                                     colorize(label, jobs.get("AL").intValue());
                                     label.setTextFill(Paint.valueOf("white"));
@@ -310,6 +320,7 @@ public class GUIForYou extends Application{
                         switch (y){
                             case 2:
                                 label.setText("MI");
+                                label.setAlignment(Pos.CENTER);
                                 if(jobs.containsKey("MI")) {
                                     colorize(label, jobs.get("MI").intValue());
                                     label.setTextFill(Paint.valueOf("white"));
@@ -317,6 +328,7 @@ public class GUIForYou extends Application{
                                 break;
                             case 3:
                                 label.setText("PA");
+                                label.setAlignment(Pos.CENTER);
                                 if(jobs.containsKey("PA")) {
                                     colorize(label, jobs.get("PA").intValue());
                                     label.setTextFill(Paint.valueOf("white"));
@@ -324,6 +336,7 @@ public class GUIForYou extends Application{
                                 break;
                             case 4:
                                 label.setText("VA");
+                                label.setAlignment(Pos.CENTER);
                                 if(jobs.containsKey("VA")) {
                                     colorize(label, jobs.get("VA").intValue());
                                     label.setTextFill(Paint.valueOf("white"));
@@ -331,6 +344,7 @@ public class GUIForYou extends Application{
                                 break;
                             case 5:
                                 label.setText("SC");
+                                label.setAlignment(Pos.CENTER);
                                 if(jobs.containsKey("SC")) {
                                     colorize(label, jobs.get("SC").intValue());
                                     label.setTextFill(Paint.valueOf("white"));
@@ -338,6 +352,7 @@ public class GUIForYou extends Application{
                                 break;
                             case 6:
                                 label.setText("GA");
+                                label.setAlignment(Pos.CENTER);
                                 if(jobs.containsKey("GA")) {
                                     colorize(label, jobs.get("GA").intValue());
                                     label.setTextFill(Paint.valueOf("white"));
@@ -349,6 +364,7 @@ public class GUIForYou extends Application{
                         switch (y){
                             case 2:
                                 label.setText("NY");
+                                label.setAlignment(Pos.CENTER);
                                 if(jobs.containsKey("NY")) {
                                     colorize(label, jobs.get("NY").intValue());
                                     label.setTextFill(Paint.valueOf("white"));
@@ -356,6 +372,7 @@ public class GUIForYou extends Application{
                                 break;
                             case 3:
                                 label.setText("NJ");
+                                label.setAlignment(Pos.CENTER);
                                 if(jobs.containsKey("NJ")) {
                                     colorize(label, jobs.get("NJ").intValue());
                                     label.setTextFill(Paint.valueOf("white"));
@@ -363,6 +380,7 @@ public class GUIForYou extends Application{
                                 break;
                             case 4:
                                 label.setText("MD");
+                                label.setAlignment(Pos.CENTER);
                                 if(jobs.containsKey("MD")) {
                                     colorize(label, jobs.get("MD").intValue());
                                     label.setTextFill(Paint.valueOf("white"));
@@ -370,6 +388,7 @@ public class GUIForYou extends Application{
                                 break;
                             case 5:
                                 label.setText("D.C.");
+                                label.setAlignment(Pos.CENTER);
                                 if(jobs.containsKey("DC")) {
                                     colorize(label, jobs.get("DC").intValue());
                                     label.setTextFill(Paint.valueOf("white"));
@@ -378,6 +397,7 @@ public class GUIForYou extends Application{
 
                             case 7:
                                 label.setText("FL");
+                                label.setAlignment(Pos.CENTER);
                                 if(jobs.containsKey("FL")) {
                                     colorize(label, jobs.get("FL").intValue());
                                     label.setTextFill(Paint.valueOf("white"));
@@ -389,6 +409,7 @@ public class GUIForYou extends Application{
                         switch (y){
                             case 1:
                                 label.setText("VT");
+                                label.setAlignment(Pos.CENTER);
                                 if(jobs.containsKey("VT")) {
                                     colorize(label, jobs.get("VT").intValue());
                                     label.setTextFill(Paint.valueOf("white"));
@@ -396,6 +417,7 @@ public class GUIForYou extends Application{
                                 break;
                             case 2:
                                 label.setText("RI");
+                                label.setAlignment(Pos.CENTER);
                                 if(jobs.containsKey("RI")) {
                                     colorize(label, jobs.get("RI").intValue());
                                     label.setTextFill(Paint.valueOf("white"));
@@ -403,6 +425,7 @@ public class GUIForYou extends Application{
                                 break;
                             case 3:
                                 label.setText("CT");
+                                label.setAlignment(Pos.CENTER);
                                 if(jobs.containsKey("CT")) {
                                     colorize(label, jobs.get("CT").intValue());
                                     label.setTextFill(Paint.valueOf("white"));
@@ -410,6 +433,7 @@ public class GUIForYou extends Application{
                                 break;
                             case 4:
                                 label.setText("DE");
+                                label.setAlignment(Pos.CENTER);
                                 if(jobs.containsKey("DE")) {
                                     colorize(label, jobs.get("DE").intValue());
                                     label.setTextFill(Paint.valueOf("white"));
@@ -421,6 +445,7 @@ public class GUIForYou extends Application{
                         switch (y){
                             case 0:
                                 label.setText("ME");
+                                label.setAlignment(Pos.CENTER);
                                 if(jobs.containsKey("ME")) {
                                     colorize(label, jobs.get("ME").intValue());
                                     label.setTextFill(Paint.valueOf("white"));
@@ -428,6 +453,7 @@ public class GUIForYou extends Application{
                                 break;
                             case 1:
                                 label.setText("NH");
+                                label.setAlignment(Pos.CENTER);
                                 if(jobs.containsKey("NH")) {
                                     colorize(label, jobs.get("NH").intValue());
                                     label.setTextFill(Paint.valueOf("white"));
@@ -435,6 +461,7 @@ public class GUIForYou extends Application{
                                 break;
                             case 2:
                                 label.setText("MA");
+                                label.setAlignment(Pos.CENTER);
                                 if(jobs.containsKey("MA")) {
                                     colorize(label, jobs.get("MA").intValue());
                                     label.setTextFill(Paint.valueOf("white"));
