@@ -32,7 +32,6 @@ public class GUIForYou extends Application{
                 switch(x){
                     case 0:
                         if(y == 0){
-                            System.out.println("Alaska");
                             label.setText("AK");
                             //GUI.State state = jobs.get("AK");
                             System.out.println(jobs);
@@ -47,17 +46,19 @@ public class GUIForYou extends Application{
                     case 1:
                         switch(y){
                             case 2:
-                                System.out.println("Washington");
                                 label.setText("WA");
-                                //label.colorChange(jobs.get("WA").getNumJobs());
+                                if(jobs.containsKey("WA"))
+                                    colorize(label, jobs.get("WA").intValue());
                                 break;
                             case 3:
                                 label.setText("OR");
-                                //label.colorChange(jobs.get("OR").getNumJobs());
+                                if(jobs.containsKey("OR"))
+                                    colorize(label, jobs.get("OR").intValue());
                                 break;
                             case 4:
                                 label.setText("CA");
-                                //label.colorChange(jobs.get("CA").getNumJobs());
+                                if(jobs.containsKey("CA"))
+                                    colorize(label, jobs.get("CA").intValue());
                                 break;
                         }
                         break;
@@ -65,19 +66,23 @@ public class GUIForYou extends Application{
                         switch (y){
                             case 2:
                                 label.setText("ID");
-                                //label.colorChange(jobs.get("ID").getNumJobs());
+                                if(jobs.containsKey("ID"))
+                                    colorize(label, jobs.get("ID").intValue());
                                 break;
                             case 3:
                                 label.setText("NV");
-                                //label.colorChange(jobs.get("NV").getNumJobs());
+                                if(jobs.containsKey("NV"))
+                                    colorize(label, jobs.get("NV").intValue());
                                 break;
                             case 4:
                                 label.setText("UT");
-                                //label.colorChange(jobs.get("UT").getNumJobs());
+                                if(jobs.containsKey("UT"))
+                                    colorize(label, jobs.get("UT").intValue());
                                 break;
                             case 5:
                                 label.setText("AZ");
-                                //label.colorChange(jobs.get("AZ").getNumJobs());
+                                if(jobs.containsKey("AZ"))
+                                    colorize(label, jobs.get("AZ").intValue());
                                 break;
                         }
                         break;
@@ -85,19 +90,23 @@ public class GUIForYou extends Application{
                         switch (y){
                             case 2:
                                 label.setText("MT");
-                                //label.colorChange(jobs.get("MT").getNumJobs());
+                                if(jobs.containsKey("MT"))
+                                    colorize(label, jobs.get("MT").intValue());
                                 break;
                             case 3:
                                 label.setText("WY");
-                                //label.colorChange(jobs.get("WY").getNumJobs());
+                                if(jobs.containsKey("WY"))
+                                    colorize(label, jobs.get("WY").intValue());
                                 break;
                             case 4:
                                 label.setText("CO");
-                                //label.colorChange(jobs.get("CO").getNumJobs());
+                                if(jobs.containsKey("CO"))
+                                    colorize(label, jobs.get("CO").intValue());
                                 break;
                             case 5:
                                 label.setText("NM");
-                                //label.colorChange(jobs.get("NM").getNumJobs());
+                                if(jobs.containsKey("NM"))
+                                    colorize(label, jobs.get("NM").intValue());
                                 break;
                         }
                         break;
@@ -105,27 +114,33 @@ public class GUIForYou extends Application{
                         switch (y){
                             case 2:
                                 label.setText("ND");
-                                //label.colorChange(jobs.get("ND").getNumJobs());
+                                if(jobs.containsKey("ND"))
+                                    colorize(label, jobs.get("ND").intValue());
                                 break;
                             case 3:
                                 label.setText("SD");
-                                //label.colorChange(jobs.get("SD").getNumJobs());
+                                if(jobs.containsKey("SD"))
+                                    colorize(label, jobs.get("SD").intValue());
                                 break;
                             case 4:
                                 label.setText("NB");
-                                //label.colorChange(jobs.get("NB").getNumJobs());
+                                if(jobs.containsKey("NB"))
+                                    colorize(label, jobs.get("NB").intValue());
                                 break;
                             case 5:
                                 label.setText("KS");
-                                //label.colorChange(jobs.get("KS").getNumJobs());
+                                if(jobs.containsKey("KS"))
+                                    colorize(label, jobs.get("KS").intValue());
                                 break;
                             case 6:
                                 label.setText("OK");
-                                //label.colorChange(jobs.get("OK").getNumJobs());
+                                if(jobs.containsKey("OK"))
+                                    colorize(label, jobs.get("OK").intValue());
                                 break;
                             case 7:
                                 label.setText("TX");
-                                //label.colorChange(jobs.get("TX").getNumJobs());
+                                if(jobs.containsKey("TX"))
+                                    colorize(label, jobs.get("TX").intValue());
                                 break;
                         }
                         break;
@@ -133,23 +148,28 @@ public class GUIForYou extends Application{
                         switch (y){
                             case 2:
                                 label.setText("MI");
-                                //label.colorChange(jobs.get("MI").getNumJobs());
+                                if(jobs.containsKey("MI"))
+                                    colorize(label, jobs.get("MI").intValue());
                                 break;
                             case 3:
                                 label.setText("IA");
-                                //label.colorChange(jobs.get("IA").getNumJobs());
+                                if(jobs.containsKey("IA"))
+                                    colorize(label, jobs.get("IA").intValue());
                                 break;
                             case 4:
                                 label.setText("MO");
-                                //label.colorChange(jobs.get("MO").getNumJobs());
+                                if(jobs.containsKey("MO"))
+                                    colorize(label, jobs.get("MO").intValue());
                                 break;
                             case 5:
                                 label.setText("AR");
-                                //label.colorChange(jobs.get("AR").getNumJobs());
+                                if(jobs.containsKey("AR"))
+                                    colorize(label, jobs.get("AR").intValue());
                                 break;
                             case 6:
                                 label.setText("LA");
-                                //label.colorChange(jobs.get("LA").getNumJobs());
+                                if(jobs.containsKey("LA"))
+                                    colorize(label, jobs.get("LA").intValue());
                                 break;
                         }
                         break;
@@ -157,23 +177,28 @@ public class GUIForYou extends Application{
                         switch (y){
                             case 2:
                                 label.setText("IL");
-                                //label.colorChange(jobs.get("IL").getNumJobs());
+                                if(jobs.containsKey("IL"))
+                                    colorize(label, jobs.get("IL").intValue());
                                 break;
                             case 3:
                                 label.setText("IN");
-                                //label.colorChange(jobs.get("IN").getNumJobs());
+                                if(jobs.containsKey("IN"))
+                                    colorize(label, jobs.get("IN").intValue());
                                 break;
                             case 4:
                                 label.setText("KY");
-                                //label.colorChange(jobs.get("KY").getNumJobs());
+                                if(jobs.containsKey("KY"))
+                                    colorize(label, jobs.get("KY").intValue());
                                 break;
                             case 5:
                                 label.setText("TN");
-                                //label.colorChange(jobs.get("TN").getNumJobs());
+                                if(jobs.containsKey("TN"))
+                                    colorize(label, jobs.get("TN").intValue());
                                 break;
                             case 6:
                                 label.setText("MS");
-                                //label.colorChange(jobs.get("MS").getNumJobs());
+                                if(jobs.containsKey("MS"))
+                                    colorize(label, jobs.get("MS").intValue());
                                 break;
                         }
                         break;
@@ -181,23 +206,28 @@ public class GUIForYou extends Application{
                         switch (y){
                             case 2:
                                 label.setText("WI");
-                                //label.colorChange(jobs.get("WI").getNumJobs());
+                                if(jobs.containsKey("WI"))
+                                    colorize(label, jobs.get("WI").intValue());
                                 break;
                             case 3:
                                 label.setText("OH");
-                                //label.colorChange(jobs.get("OH").getNumJobs());
+                                if(jobs.containsKey("OH"))
+                                    colorize(label, jobs.get("OH").intValue());
                                 break;
                             case 4:
                                 label.setText("WV");
-                                //label.colorChange(jobs.get("WV").getNumJobs());
+                                if(jobs.containsKey("WV"))
+                                    colorize(label, jobs.get("WV").intValue());
                                 break;
                             case 5:
                                 label.setText("NC");
-                                //label.colorChange(jobs.get("NC").getNumJobs());
+                                if(jobs.containsKey("NC"))
+                                    colorize(label, jobs.get("NC").intValue());
                                 break;
                             case 6:
                                 label.setText("AL");
-                                //label.colorChange(jobs.get("AL").getNumJobs());
+                                if(jobs.containsKey("AL"))
+                                    colorize(label, jobs.get("AL").intValue());
                                 break;
                         }
                         break;
