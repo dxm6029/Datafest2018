@@ -328,12 +328,12 @@ public class GUIForYou extends Application{
         String[] c;
 
         c = new String[6];
-        c[0] = "purple";
-        c[1] = "blue";
-        c[2] = "green";
-        c[3] = "yellow";
-        c[4] = "orange";
-        c[5] = "red";
+        c[0] = "darkgreen";
+        c[1] = "green";
+        c[2] = "lightgreen";
+        c[3] = "pink";
+        c[4] = "red";
+        c[5] = "darkred";
 
         double incNum = mostJobs / 6;
 
